@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 300px;
+            height:300px;
+            border:10px black solid;
+            margin: 100px auto;
+            border-radius: 50%;
+            position: relative;
+        }
+        .line1{
+             width: 10px;
+             height: 300px;
+             background-color: black;
+             position: absolute;
+             left:50%;
+             top:0;
+            transform: translate(-50%,0);
+         }
+        .line2{
+            width: 8px;
+            height: 300px;
+            background-color: black;
+            position: absolute;
+            left:50%;
+            top:0;
+            transform: translate(-50%,0) rotate(30deg);
+        }
+        .line3{
+            width: 8px;
+            height: 300px;
+            background-color: black;
+            position: absolute;
+            left:50%;
+            top:0;
+            transform: translate(-50%,0) rotate(60deg);
+        }
+        .line4{
+            width: 10px;
+            height: 300px;
+            background-color: black;
+            position: absolute;
+            left:50%;
+            top:0;
+            transform: translate(-50%,0) rotate(90deg);
+        }
+        .line5{
+            width: 8px;
+            height: 300px;
+            background-color: black;
+            position: absolute;
+            left:50%;
+            top:0;
+            transform: translate(-50%,0) rotate(120deg);
+        }
+        .line6{
+            width: 8px;
+            height: 300px;
+            background-color: black;
+            position: absolute;
+            left:50%;
+            top:0;
+            transform: translate(-50%,0) rotate(150deg);
+        }
+        .cover{
+            width: 250px;
+            height: 250px;
+            background-color: #fff;
+            position: absolute;
+            border-radius: 50%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+       .hour{
+           width: 6px;
+           height: 80px;
+           background-color: rgba(1, 0, 9, 0.37);
+           position: absolute;
+           left: 50%;
+           top: 50%;
+           transform: translate(-50%,-100%);
+           transform-origin: center bottom;
+           animation:clockAnimation 43200s linear infinite;
+       }
+        .minute{
+            width: 5px;
+            height: 90px;
+            background-color: #090051;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-100%);
+            transform-origin: center bottom;
+            animation:clockAnimation 3600s linear infinite;
+        }
+        .second{
+            width: 4px;
+            height: 100px;
+            background-color: #010009;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-100%);
+
+            /*设置旋转轴心*/
+            transform-origin: center bottom;
+            animation:clockAnimation 60s infinite steps(60);
+        }
+        .center{
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            border-radius:50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        @keyframes clockAnimation {
+            from{
+                transform:translate(-50%,-100%) rotate(0deg);
+            }
+            to{
+                transform:translate(-50%,-100%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="clock">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+    <div class="line4"></div>
+    <div class="line5"></div>
+    <div class="line6"></div>
+
+    <div class="cover"></div>
+
+    <div class="hour"></div>
+    <div class="minute"></div>
+    <div class="second"></div>
+
+    <div class="center"></div>
+</div>
+
+</body>
+</html>
